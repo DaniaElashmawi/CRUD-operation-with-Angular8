@@ -1,0 +1,28 @@
+*
+{
+box-sizing: border-box;
+}
+.layer
+{
+  background-color: #eeeeee;
+  padding-top: 16px;
+  border-radius: 12px;
+}
+input
+{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    width: 80%;
+    font-size: 15px;
+    margin: 0 auto;
+    max-height: 2em;
+}
+ p
+{
+  font-size: 16px;
+  color: #333333;
+  font-weight: 700;
+  margin: 16px auto;
+
+}

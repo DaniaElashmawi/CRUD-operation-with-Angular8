@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+<div class="container text-center mt-5 layer ">
+ <h2 class="mb-5"><strong>Bookmark</strong> your favorite sites!</h2>
+<form [formGroup]= "siteinfo" (ngSubmit)= "onSubmit()" class="text-center">
+    <p class="label">Site Name :</p>
+    <input id="sname" class="w-50 mb-3" type="text" formControlName= "siteName" placeholder="Bookmark Name">
+     <p  class="label">Site URL :</p>
+      <input id="surl" class="w-50 mb-3" type="text" formControlName= "siteURL" placeholder="website URL">
+      <br/>
+<button *ngIf="btn ; else btn2" class="btn btn-success mb-2" type="submit" [disabled]="!siteinfo.valid" >Add</button>
+<ng-template #btn2><button class="btn btn-primary mb-2" (click)="up()" type="button">Update</button></ng-template>
+</form>
+</div>
+
+<div class="container text-center mt-5 ">
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let site of data ">
+      <div class=" m-3 p-3 border ">
+<h4>{{site.siteName}}</h4>
+<h6 (click)="site.siteURL">{{site.siteURL}}</h6>
+<button (click)="update(site)" class="btn btn-primary m-1">Update</button>
+<button (click)="del(site)" class="btn btn-danger m-1">Delete</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
